@@ -1,5 +1,8 @@
-:root {
+* {
   font-family: Montserrat, sans-serif;
+}
+
+:root {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -28,7 +31,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* max-width: fit-content; */
   padding: 24px;
   gap: 8px;
   flex-grow: 1;
