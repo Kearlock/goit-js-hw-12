@@ -21,11 +21,4 @@ export default async function getImages(query, page) {
     console.error('API Error:', error);
     throw error;
   }
-  // return axios
-  //   .get(BASE_URL, { params })
-  //   .then(response => response.data)
-  //   .catch(error => {
-  //     console.error('API Error:', error);
-  //     throw error;
-  //   });
 }
