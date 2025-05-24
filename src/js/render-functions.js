@@ -79,7 +79,7 @@ export function createGallery(images) {
     `
     )
     .join('');
-  gallery.insertAdjacentHTML('afterbegin', markup);
+  gallery.insertAdjacentHTML('beforeend', markup);
   lightbox.refresh();
 }
 // function clearGallery
@@ -87,12 +87,22 @@ export function clearGallery() {
   gallery.innerHTML = '';
 }
 
+const loader = document.querySelector('.loader');
+
 export function showLoader() {
-  const loader = document.querySelector('.loader');
   loader.classList.remove('hidden');
 }
 
 export function hideLoader() {
-  const loader = document.querySelector('.loader');
   loader.classList.add('hidden');
+}
+
+const loadMoreButton = document.querySelector('.load-more');
+
+export function hideLoadMoreButton() {
+  loadMoreButton.classList.add('hidden');
+}
+
+export function showLoadMoreButton() {
+  loadMoreButton.classList.remove('hidden');
 }

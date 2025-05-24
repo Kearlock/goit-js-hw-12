@@ -28,7 +28,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: fit-content;
+  /* max-width: fit-content; */
   padding: 24px;
   gap: 8px;
   flex-grow: 1;
@@ -76,6 +76,8 @@ button {
   letter-spacing: 0.04em;
   color: #ffffff;
   text-align: center;
+  max-width: max-content;
+  margin: 0 auto;
 }
 
 button:hover {
