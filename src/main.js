@@ -1,8 +1,7 @@
 // Import 3-d party
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+
 // Import own modules
 import getImagesByQuery from './js/pixabay-api.js';
 import {
@@ -52,12 +51,5 @@ form.addEventListener('submit', e => {
     })
     .finally(() => {
       hideLoader();
-      lightbox.refresh();
     });
-});
-
-const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
-  overlayOpacity: 0.8,
 });

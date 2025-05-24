@@ -1,5 +1,5 @@
-// import SimpleLightbox from 'simplelightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 // ========================================================================
 // const exampleImage = {
@@ -31,6 +31,12 @@
 
 // find gallery element
 const gallery = document.querySelector('.gallery');
+
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+  overlayOpacity: 0.8,
+});
 
 export function createGallery(images) {
   // Create gallery
@@ -74,13 +80,7 @@ export function createGallery(images) {
     )
     .join('');
   gallery.insertAdjacentHTML('afterbegin', markup);
-
-  // const lightbox = new SimpleLightbox('.gallery a', {
-  //   captionsData: 'alt',
-  //   captionDelay: 250,
-  //   overlayOpacity: 0.8,
-  // });
-  // lightbox.refresh();
+  lightbox.refresh();
 }
 // function clearGallery
 export function clearGallery() {
