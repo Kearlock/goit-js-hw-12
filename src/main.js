@@ -88,7 +88,7 @@ loadMoreButton.addEventListener('click', async () => {
     } else {
       hideLoadMoreButton();
       iziToast.info({
-        message: `All ${data.totalHits} images displayed.`,
+        message: `We're sorry, but you've reached the end of search results.`,
       });
     }
   } catch (error) {
